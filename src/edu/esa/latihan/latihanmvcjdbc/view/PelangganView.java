@@ -16,7 +16,8 @@ import edu.esa.latihan.latihanmvcjdbc.service.PelangganDao;
 import java.sql.SQLException;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 /**
  *
  * @author Esa
@@ -325,6 +326,7 @@ public class PelangganView extends javax.swing.JPanel implements PelangganListen
 
     @Override
     public void onUpdate(Pelanggan pelanggan) {
+        
         int index = tablePelanggan.getSelectedRow();
         tableModel.set(index, pelanggan);
     }
